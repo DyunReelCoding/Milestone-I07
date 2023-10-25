@@ -37,9 +37,72 @@
       <div class="game">
         <img src="images/gta.png" alt="Game 1" class="game__image">
         <div class="game__details">
-          <h3 class="game__title">GTA 5</h3>
+          <h3 class="game__title">GTA V</h3>
           <p class="game__description">Explore Manhattan and do some crime time.</p>
           <p class="game__price">$59.99</p>
+          <button class="game__buy-button">Buy</button>
+        </div>
+      </div>
+      <div class="game">
+        <img src="images/devil.jpg" alt="Game 1" class="game__image">
+        <div class="game__details">
+          <h3 class="game__title">Devil May Cry 5</h3>
+          <p class="game__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet doloribus a, dolore debitis eius maxime non nulla, deserunt culpa quaerat nisi? Voluptatibus, exercitationem architecto. Pariatur voluptates quas quos corrupti illo.</p>
+          <p class="game__price">$59.99</p>
+          <button class="game__buy-button">Buy</button>
+        </div>
+      </div>
+      <div class="game">
+        <img src="images/mortal.png" alt="Game 1" class="game__image">
+        <div class="game__details">
+          <h3 class="game__title">Mortal Kombat</h3>
+          <p class="game__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet doloribus a, dolore debitis eius maxime non nulla, deserunt culpa quaerat nisi? Voluptatibus, exercitationem architecto. Pariatur voluptates quas quos corrupti illo</p>
+          <p class="game__price">$59.99</p>
+          <button class="game__buy-button">Buy</button>
+        </div>
+      </div>
+      <div class="game">
+        <img src="images/nba.png" alt="Game 1" class="game__image">
+        <div class="game__details">
+          <h3 class="game__title">NBA 2K22</h3>
+          <p class="game__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet doloribus a, dolore debitis eius maxime non nulla, deserunt culpa quaerat nisi? Voluptatibus, exercitationem architecto. Pariatur voluptates quas quos corrupti illo</p>
+          <p class="game__price">$59.99</p>
+          <button class="game__buy-button">Buy</button>
+        </div>
+      </div>
+      <div class="game">
+        <img src="images/spider.jpg" alt="Game 1" class="game__image">
+        <div class="game__details">
+          <h3 class="game__title">Spider-Man</h3>
+          <p class="game__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet doloribus a, dolore debitis eius maxime non nulla, deserunt culpa quaerat nisi? Voluptatibus, exercitationem architecto. Pariatur voluptates quas quos corrupti illo</p>
+          <p class="game__price">$59.99</p>
+          <button class="game__buy-button">Buy</button>
+        </div>
+      </div>
+      <div class="game">
+        <img src="images/dota.jpg" alt="Game 1" class="game__image">
+        <div class="game__details">
+          <h3 class="game__title">DOTA 2</h3>
+          <p class="game__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet doloribus a, dolore debitis eius maxime non nulla, deserunt culpa quaerat nisi? Voluptatibus, exercitationem architecto. Pariatur voluptates quas quos corrupti illo</p>
+          <p class="game__price">FREE</p>
+          <button class="game__buy-button">Buy</button>
+        </div>
+      </div>
+      <div class="game">
+        <img src="images/pubg.jpg" alt="Game 1" class="game__image">
+        <div class="game__details">
+          <h3 class="game__title">PlayerUnknown's Battlegrounds</h3>
+          <p class="game__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet doloribus a, dolore debitis eius maxime non nulla, deserunt culpa quaerat nisi? Voluptatibus, exercitationem architecto. Pariatur voluptates quas quos corrupti illo</p>
+          <p class="game__price">FREE</p>
+          <button class="game__buy-button">Buy</button>
+        </div>
+      </div>
+      <div class="game">
+        <img src="images/valorant.jpg" alt="Game 1" class="game__image">
+        <div class="game__details">
+          <h3 class="game__title">Valorant</h3>
+          <p class="game__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet doloribus a, dolore debitis eius maxime non nulla, deserunt culpa quaerat nisi? Voluptatibus, exercitationem architecto. Pariatur voluptates quas quos corrupti illo</p>
+          <p class="game__price">FREE</p>
           <button class="game__buy-button">Buy</button>
         </div>
       </div>
@@ -57,6 +120,6 @@
     </div>
   </div>
 
-
+    <script src="script.js"></script>
 </body>
 </html>
