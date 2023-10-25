@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
                 $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
                 $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
                 $mail->Username   = 'hovikjied@gmail.com';                     //SMTP username
-                $mail->Password   = 'fbtcozzmynieazpj';                               //SMTP password
+                $mail->Password   = 'zyogosvhnioawvfd';                               //SMTP password
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                 $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
                 //Content
                 $mail->isHTML(true);                                  //Set email format to HTML
                 $mail->Subject = 'no reply';
-                $mail->Body    = 'Here is the verification link <b><a href="http://localhost/milestone/change-password.php?reset='.$code.'">http://localhost/milestone/change-password.php?reset='.$code.'</a></b>';
+                $mail->Body    = 'Here is the verification link for password reset <b><a href="http://localhost/milestone/change-password.php?reset='.$code.'">http://localhost/milestone/change-password.php?reset='.$code.'</a></b>';
 
                 $mail->send();
                 echo 'Message has been sent';
