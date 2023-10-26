@@ -33,8 +33,21 @@
             $row = mysqli_fetch_assoc($result);
 
             if (empty($row['code'])) {
-                $_SESSION['SESSION_EMAIL'] = $email;
-                header("Location: welcome.php");
+                // Validate reCAPTCHA
+                $recaptchaResponse = $_POST['g-recaptcha-response'];
+                $recaptchaSecretKey = '6LdVIc4oAAAAAFRImqezIKWk_SvYjsOkXt0zhP86'; 
+
+                // Verify reCAPTCHA
+                $recaptchaVerify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecretKey&response=$recaptchaResponse");
+                $recaptchaData = json_decode($recaptchaVerify);
+
+                if (!$recaptchaData->success) {
+                    $msg = "<div class='alert alert-danger'>Please verify that you are not a robot.</div>";
+                } else {
+                    // reCAPTCHA validation passed
+                    $_SESSION['SESSION_EMAIL'] = $email;
+                    header("Location: welcome.php");
+                }
             } else {
                 $msg = "<div class='alert alert-info'>First verify your account and try again.</div>";
             }
@@ -61,9 +74,10 @@
     <!--/Style-CSS -->
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
     <!--//Style-CSS -->
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/af562a2a63.js" crossorigin="anonymous"></script>
-
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -87,7 +101,10 @@
                             <input type="email" class="email" name="email" placeholder="Enter Your Email" required>
                             <input type="password" class="password" name="password" placeholder="Enter Your Password" style="margin-bottom: 2px;" required>
                             <p><a href="forgot-password.php" style="margin-bottom: 15px; display: block; text-align: right;">Forgot Password?</a></p>
-                            <button name="submit" name="submit" class="btn" type="submit">Login</button>
+                            <div class="form-group">
+                                <div class="g-recaptcha" data-sitekey="6LdVIc4oAAAAAGnHXfdAGUf7cu_JVi-eO3iiJc7X"></div>
+                            </div>
+                            <button id="login" name="submit" class="btn" type="submit">Login</button>
                         </form>
                         <div class="social-icons">
                             <p>Create Account! <a href="register.php">Register</a>.</p>
@@ -110,7 +127,5 @@
             });
         });
     </script>
-
 </body>
-
 </html>
